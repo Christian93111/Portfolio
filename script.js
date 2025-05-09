@@ -8,7 +8,6 @@ navbarToggle.addEventListener('click', () => {
     navbarToggle.classList.toggle('active');
 });
 
-
 /* ========== Scrolling Function & Auto Close Navbar ========== */
 
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
