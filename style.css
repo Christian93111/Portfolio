@@ -4,11 +4,14 @@
 	box-sizing: border-box;
 }
 
-html, body {
+html {
+	scroll-behavior: smooth;
+}
+
+body {
 	font-family: "Jost", sans-serif;
 	min-height: 100vh;
 	background-color: rgb(40, 40, 40);
-	scroll-behavior: smooth;
 }
 
 /* ==================== Navbar ==================== */

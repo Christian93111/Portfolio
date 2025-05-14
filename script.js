@@ -155,7 +155,7 @@ class lightMode {
         localStorage.setItem('theme', 'light');
       }
       else {
-        localStorage.setItem('theme', 'light');
+        localStorage.setItem('theme', 'dark');
       }
   }
 
