@@ -8,21 +8,32 @@
     <meta name="Language" content="en">
     <meta name="description" content="Simple personal website">
     <meta name="author" content="Christian">
+    <meta name="keywords" content="Christian, portfolio, personal website, web developer, programmer, cybersecurity, it student">
+    <meta name="apple-mobile-web-app-title" content="Christian">
+    <meta name="application-name" content="Christian">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- Facebook Meta Tags -->
     <meta property="og:title" content="Christian">
     <meta property="og:site_name" content="Christian">
     <meta property="og:url" content="https://christian9311.pages.dev">
     <meta property="og:description" content="Simple personal website">
-    <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="Christian">
-    <meta name="apple-mobile-web-app-title" content="Christian">
-    <meta name="application-name" content="Christian">
     <meta property="og:type" content="website">
-    <meta property="og:image" content="/img/temp_image.jpg">
+    <meta property="og:image" content="https://christian9311.pages.dev/img/temp_image.jpg">
     <meta property="og:image:type" content="image/jpeg">
-    <meta name="theme-color" content="#ffffff">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Christian">
     <meta name="twitter:description" content="Simple personal website">
-    <meta name="twitter:image" content="/img/temp_image.jpg">
-    <link rel="shortcut icon" href="img/temp_image.jpg" type="image/x-icon">
+    <meta property="twitter:url" content="https://christian9311.pages.dev/">
+    <meta name="twitter:domain" content="christian9311.pages.dev">
+    <meta name="twitter:image" content="https://christian9311.pages.dev/img/temp_image.jpg">
+    <meta name="twitter:image:alt" content="Christian's profile image">
+
+    <link rel="shortcut icon" href="https://christian9311.pages.dev/img/temp_image.jpg" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
     <title>Christian</title>
@@ -157,17 +168,16 @@
       <h1>Contact Me</h1>
       <p class="contact-description">Feel free to contact me with any inquiries or questions</p>
 
-      <form method="post">
-        <input type="text" id="name" name="name" placeholder="Name" required>
-        <input type="text" id="email" name="email" placeholder="Email" required>
-        <textarea name="message" id="message" placeholder="Message" required></textarea>
-        <button type="submit" class="contact-submit" id="submit">Submit</button>
+      <form action="https://formspree.io/f/mblywwqd" method="POST">
+        <input type="text" name="name" placeholder="Name" required>
+        <input type="email" name="email" placeholder="Email" required>
+        <textarea name="message" placeholder="Message" required></textarea>
+        <button type="submit" class="contact-submit">Submit</button>
       </form>
     </section>
 
     <script src="script.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-
     <script>
       AOS.init();
     </script>
