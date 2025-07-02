@@ -515,6 +515,7 @@ input:hover, textarea:hover {
 }
 
 textarea {
+	color: black;
 	height: 500px;
 	resize: none;
 	font-size: 100%;

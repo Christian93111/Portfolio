@@ -111,6 +111,7 @@ class lightMode {
     this.contactSection = document.querySelector('.contact-section');
     this.inputFields = document.querySelectorAll('input, textarea');
     this.contactSubmit = document.querySelector('.contact-submit');
+    this.textArea = document.querySelector('textarea');
 
     this.toggle.addEventListener('click', this.toggleLightMode.bind(this));
     this.saveTheme();
@@ -162,6 +163,7 @@ class lightMode {
         input.classList.toggle('input-light');
       });
       this.contactSubmit.classList.toggle('contact-submit-light');
+      this.textArea.classList.toggle('textarea-light')
   }
 
   saveTheme() {
