@@ -88,6 +88,11 @@ document.getElementById('facebook').addEventListener('click', function(e) {
     openAppOrWeb('fb://profile/100019100501787', 'https://www.facebook.com/CDR9311');
 });
 
+document.getElementById('tiktok').addEventListener('click', function(e) {
+  e.preventDefault();
+  openAppOrWeb('tiktok://user/@cdr9311','https://www.tiktok.com/@cdr9311');
+});
+
 /* ========== Light Mode Function ========== */
 
 class lightMode {

@@ -388,6 +388,10 @@ main {
 	border-radius: 10px;
 }
 
+.tiktok-img {
+	border-radius: 10px;
+}
+
 .card:hover .card-img {
 	transform: scale(1.1);
 }
