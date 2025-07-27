@@ -75,8 +75,7 @@ document.getElementById('github').addEventListener('click', function(e) {
 
 document.getElementById('instagram').addEventListener('click', function(e) {
   e.preventDefault();
-  openAppOrWeb('http://192.168.100.31:5500', 'http://192.168.100.31:5500')
-  // openAppOrWeb('instagram://user?username=cdr9311', 'https://www.instagram.com/cdr9311')
+  openAppOrWeb('instagram://user?username=cdr9311', 'https://www.instagram.com/cdr9311')
 });
 
 document.getElementById('discord').addEventListener('click', function(e) {
