@@ -8,6 +8,54 @@ navbarToggle.addEventListener('click', () => {
   navbarToggle.classList.toggle("active");
 });
 
+/* ========== Type Writer Effect ========== */
+
+const words = ["// User Data","// Beginner","// Web Developer","// Cyber Security", "// Ethical Hacker"];
+const textElement = document.getElementById("words");
+
+let wordIndex = 0;
+let charIndex = 0;
+
+const typingSpeed = 100;
+const deletingSpeed = 50;
+const pauseBetweenWords = 1500;
+
+function type() {
+  if (wordIndex < words.length) {
+    const currentWord = words[wordIndex];
+    if (charIndex < currentWord.length) {
+      textElement.textContent += currentWord.charAt(charIndex);
+      charIndex++;
+      setTimeout(type, typingSpeed);
+    }
+    else {
+      setTimeout(deleteWord, pauseBetweenWords);
+    }
+  }
+
+  else {
+    wordIndex = 0;
+    charIndex = 0;
+    setTimeout(type, pauseBetweenWords);
+  }
+}
+
+function deleteWord() {
+  const currentWord = words[wordIndex];
+  if (textElement.textContent.length > 0) {
+    textElement.textContent = currentWord.substring(0, textElement.textContent.length -1);
+    setTimeout(deleteWord, deletingSpeed);
+  }
+
+  else {
+    wordIndex++;
+    charIndex = 0;
+    setTimeout(type, typingSpeed);
+  }
+}
+
+type();
+
 /* ========== Scrolling Function & Auto Close Navbar ========== */
 
 class ScrollToSection {
@@ -22,22 +70,10 @@ class ScrollToSection {
         const targetId = anchor.getAttribute('href').substring(1);
         const targetElement = document.getElementById(targetId);
 
-/* ========== In case the smooth scroll won't work properly ========== */
-
-        // if (targetElement) {
-        //   window.scrollTo({
-        //     top: targetElement.offsetTop - 80,
-        //     behavior: 'smooth'
-        //   });
-        // }
-
-/* ==================================================================== */
-
         if (targetElement) {
-          targetElement.scrollIntoView({
-            behavior: 'smooth',
-            block: 'start',
-            inline: 'nearest'
+          window.scrollTo({
+            top: targetElement.offsetTop - 80,
+            behavior: 'smooth'
           });
         }
 
