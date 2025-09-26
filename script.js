@@ -10,7 +10,7 @@ navbarToggle.addEventListener('click', () => {
 
 /* ========== Type Writer Effect ========== */
 
-const words = ["// User Data","// Beginner","// Web Developer","// Cyber Security", "// Ethical Hacker"];
+const words = ["User Data", "Beginner", "Web Developer", "Green Hat Hacker"];
 const textElement = document.getElementById("words");
 
 let wordIndex = 0;
@@ -58,33 +58,33 @@ type();
 
 /* ========== Scrolling Function & Auto Close Navbar ========== */
 
-class ScrollToSection {
-  constructor() {
-    this.navbarMenu = document.querySelector('.navbar-menu');
-    this.navbarToggle = document.querySelector('.navbar-toggle');
+function ScrollToSection() {
+  const navbarMenu = document.querySelector('.navbar-menu');
+  const navbarToggle = document.querySelector('.navbar-toggle');
 
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', (e) => {
-        e.preventDefault();
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', (e) => {
+      e.preventDefault();
 
-        const targetId = anchor.getAttribute('href').substring(1);
-        const targetElement = document.getElementById(targetId);
+      const targetId = anchor.getAttribute('href').substring(1);
+      const targetElement = document.getElementById(targetId);
 
-        if (targetElement) {
-          window.scrollTo({
-            top: targetElement.offsetTop - 80,
-            behavior: 'smooth'
-          });
-        }
+      if (targetElement) {
+        window.scrollTo({
+          top: targetElement.offsetTop - 80,
+          behavior: 'smooth'
+        });
+      }
 
-        if (window.innerWidth <= 800) {
-          this.navbarMenu.classList.remove('active');
-          this.navbarToggle.classList.remove('active');
-        }
-      });
+      if (window.innerWidth <= 800) {
+        navbarMenu.classList.remove('active');
+        navbarToggle.classList.remove('active');
+      }
     });
-  }
+  });
 }
+
+ScrollToSection();
 
 /* ========== Link Functions if Desktop or Mobile ========== */
 
@@ -204,7 +204,7 @@ class lightMode {
         input.classList.toggle('input-light');
       });
       this.contactSubmit.classList.toggle('contact-submit-light');
-      this.textArea.classList.toggle('textarea-light')
+      this.textArea.classList.toggle('textarea-light');
   }
 
   saveTheme() {
@@ -222,6 +222,5 @@ class lightMode {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-  new ScrollToSection();
   new lightMode();
 });

@@ -253,9 +253,8 @@ main {
 }
 
 .profile-image img {
-	width: 200px;
+	width: 350px;
 	height: auto;
-	border-radius: 50%;
 	object-fit: cover;
 }
 
