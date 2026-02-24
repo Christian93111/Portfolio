@@ -108,13 +108,13 @@
           <div class="terminal-output-line">
             <span class="output-text highlight">Welcome to my terminal! Type 'help' for available commands.</span>
           </div>
-          <div class="terminal-output-line">
+          <!-- <div class="terminal-output-line">
             <span class="output-text" style="color: var(--text-muted);">──────────────────────────────────────────────</span>
-          </div>
+          </div> -->
         </div>
         <div class="terminal-input-line">
           <span class="terminal-prompt">guest@fan2k:~$</span>
-          <input type="text" class="terminal-input" id="terminal-input" placeholder="type a command..." autocomplete="off" spellcheck="false">
+          <input type="text" class="terminal-input" id="terminal-input" placeholder="Type a command..." autocomplete="off" spellcheck="false">
         </div>
       </div>
     </section>
@@ -190,6 +190,15 @@
     <section data-aos="fade-up" class="project-section" id="projects">
       <h1 class="section-title" style="width:100%">Projects</h1>
       <p class="section-subtitle" style="width:100%; margin-top:-0.5rem;">/* things i've built */</p>
+
+      <div class="card-project">
+        <img src="img/azamuku-background.png" alt="azamuku">
+        <div class="card-project-content">
+          <h1>Azamuku-v2</h1>
+          <p>A Python-based C2 (Command and Control) server with support for HTTP/HTTPS, tunneling (ngrok, localtunnel), and payload generation.</p>
+          <button type="button" class="card-button-project" onclick="window.open('https://github.com/Christian93111/azamuku-v2', '_blank')">Visit</button>
+        </div>
+      </div>
 
       <div class="card-project">
           <img src="img/to-do-list-background.png" alt="to_do_list">

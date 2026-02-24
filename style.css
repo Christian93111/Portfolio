@@ -187,8 +187,6 @@ body::before {
 	border-radius: 2px;
 }
 
-
-
 /* ==================== Mobile Nav ==================== */
 
 @media screen and (max-width: 880px) {
@@ -211,7 +209,7 @@ body::before {
 
 	.navbar-toggle {
 		display: block;
-		z-index: 101;
+		z-index: 1;
 	}
 
 	.bar {
@@ -223,7 +221,8 @@ body::before {
 	}
 
 	.navbar-toggle.active .bar:nth-child(1) {
-		transform: rotate(45deg) translateY(8px);
+		transform: rotate(45deg) translateY(9px);
+		margin-left: 15px;
 	}
 
 	.navbar-toggle.active .bar:nth-child(2) {
@@ -231,7 +230,8 @@ body::before {
 	}
 
 	.navbar-toggle.active .bar:nth-child(3) {
-		transform: rotate(-45deg) translateY(-8px);
+		transform: rotate(-45deg) translateY(-9px);
+		margin-left: 15px;
 	}
 
 	.slider {
