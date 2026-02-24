@@ -6,18 +6,18 @@
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="robots" content="all">
     <meta name="Language" content="en">
-    <meta name="description" content="Simple personal website">
+    <meta name="description" content="Christian Dhane Ramizo — IT Student, Web Developer & Cybersecurity Enthusiast">
     <meta name="author" content="Christian">
-    <meta name="keywords" content="portfolio, personal website, web developer, programmer, cybersecurity, it student">
-    <meta name="apple-mobile-web-app-title" content="Christian">
-    <meta name="application-name" content="Christian">
-    <meta name="theme-color" content="#ffffff">
+    <meta name="keywords" content="portfolio, personal website, web developer, programmer, cybersecurity, it student, hacker, ctf">
+    <meta name="apple-mobile-web-app-title" content="Fan2K">
+    <meta name="application-name" content="Fan2K">
+    <meta name="theme-color" content="#0a0a0f">
 
     <!-- Facebook Meta Tags -->
-    <meta property="og:title" content="Christian">
-    <meta property="og:site_name" content="Christian">
-    <meta property="og:url" content="https://christian9311.pages.dev">
-    <meta property="og:description" content="Simple personal website">
+    <meta property="og:title" content="Christian Dhane Ramizo | Portfolio">
+    <meta property="og:site_name" content="Christian Dhane Ramizo">
+    <meta property="og:url" content="https://christian93111.github.io/Portfolio">
+    <meta property="og:description" content="IT Student, Web Developer & Cybersecurity Enthusiast">
     <meta property="og:type" content="website">
     <meta property="og:image" content="img/profile.png">
     <meta property="og:image:type" content="image/jpeg">
@@ -26,24 +26,27 @@
     
     <!-- Twitter Meta Tags -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Christian">
-    <meta name="twitter:description" content="Simple personal website">
-    <meta property="twitter:url" content="https://christian9311.pages.dev/">
-    <meta name="twitter:domain" content="christian9311.pages.dev">
+    <meta name="twitter:title" content="Christian Dhane Ramizo | Portfolio">
+    <meta name="twitter:description" content="IT Student, Web Developer & Cybersecurity Enthusiast">
+    <meta property="twitter:url" content="https://christian93111.github.io/Portfolio">
+    <meta name="twitter:domain" content="christian93111.github.io">
     <meta name="twitter:image" content="img/profile.png">
-    <meta name="twitter:image:alt" content="Christian's profile image">
+    <meta name="twitter:image:alt" content="Christian Dhane Ramizo profile image">
 
     <link rel="shortcut icon" href="img/profile.png" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
-    <title>Christian</title>
+    <title>Christian Dhane Ramizo | Portfolio</title>
 </head>
 <body>
+    <!-- Matrix Rain Background -->
+    <canvas id="matrix-canvas"></canvas>
+
     <nav class="navbar">
         <div class="navbar-container">
             <h1 class="navbar-logo">Fan2K</h1>
 
-            <button class="navbar-toggle">
+            <button class="navbar-toggle" aria-label="Toggle navigation">
               <span class="bar"></span>
               <span class="bar"></span>
               <span class="bar"></span>
@@ -52,16 +55,11 @@
               <ul class="navbar-menu">
                   <li><a href="#home">Home</a></li>
                   <li><a href="#about">About</a></li>
+                  <li><a href="#terminal">Terminal</a></li>
                   <li><a href="#links">Links</a></li>
                   <li><a href="#projects">Projects</a></li>
                   <li><a href="#contact">Contact</a></li>
 
-                  <label class="ui-switch">
-                    <input type="checkbox" id="light-mode">
-                    <div class="slider">
-                      <div class="circle"></div>
-                    </div>
-                  </label>
               </ul>
         </div>
     </nav>
@@ -73,13 +71,15 @@
             </div>
 
             <div class="profile-data">
-                <h3 class="comment">// <span class="comment" id="words"></span></h3>
+                <h3 class="comment">// <span class="comment" id="words"></span><span class="cursor-blink">|</span></h3>
                 <div><span class="braces">{</span></div>
 
                 <div class="json">
                     <p class="type">name<span class="colon">:</span> <span class="description">"Christian Dhane Ramizo"</span><span class="comma">,</span></p>
+                    <p class="type">alias<span class="colon">:</span> <span class="description">"Fan2K"</span><span class="comma">,</span></p>
                     <p class="type">year<span class="colon">:</span> <span class="description">"2nd Year College"</span><span class="comma">,</span></p>
-                    <p class="type">school<span class="colon">:</span> <span class="description">"Sibugay Technical Institute Incorporated"</span><span class="comma">,</span></p>
+                    <p class="type">school<span class="colon">:</span> <span class="description">"Sibugay Technical Institute Inc."</span><span class="comma">,</span></p>
+                    <p class="type">focus<span class="colon">:</span> <span class="description">"Cybersecurity &amp; Web Development"</span></p>
                 </div>
 
                 <div><span class="braces">}</span></div>
@@ -88,12 +88,40 @@
     </main>
 
     <section data-aos="fade-up" class="about-section" id="about">
-      <h1 class="about-title">About Me</h1>
-      <p class="about-description">Hi i'm Christian, a 2nd year BSIT student from Sibugay Technical Institute Incorporated. at Ipil Zamboanga Sibugay. i've found very happy place to be in the world of coding and technology. it's a place i love, a place where i constantly immerse myself in the pursuit of knowledge and improving what i do. teaching myself to draw has become a hobby for me and i am always looking for new challenges to improving my skills.</p>
+      <h1 class="section-title">About Me</h1>
+      <p class="about-description">Hi, I'm Christian — a 2nd year BSIT student from Sibugay Technical Institute Incorporated at Ipil, Zamboanga Sibugay. I've found my happy place in the world of coding, cybersecurity and technology. It's a place I love, where I constantly immerse myself in the pursuit of knowledge and improving what I do. I'm passionate about CTF challenges, web development, and learning how systems work at a deeper level. Drawing has also become a hobby for me, and I am always looking for new challenges to sharpen my skills.</p>
+    </section>
+
+    <!-- Interactive Linux Terminal -->
+    <section data-aos="fade-up" class="terminal-section" id="terminal">
+      <h1 class="section-title">Terminal</h1>
+      <p class="section-subtitle">/* try typing 'help' to get started */</p>
+
+      <div class="terminal-window">
+        <div class="terminal-header">
+          <span class="terminal-dot red"></span>
+          <span class="terminal-dot yellow"></span>
+          <span class="terminal-dot green"></span>
+          <span class="terminal-title">guest@fan2k: ~</span>
+        </div>
+        <div class="terminal-body" id="terminal-output">
+          <div class="terminal-output-line">
+            <span class="output-text highlight">Welcome to my terminal! Type 'help' for available commands.</span>
+          </div>
+          <div class="terminal-output-line">
+            <span class="output-text" style="color: var(--text-muted);">──────────────────────────────────────────────</span>
+          </div>
+        </div>
+        <div class="terminal-input-line">
+          <span class="terminal-prompt">guest@fan2k:~$</span>
+          <input type="text" class="terminal-input" id="terminal-input" placeholder="type a command..." autocomplete="off" spellcheck="false">
+        </div>
+      </div>
     </section>
 
     <section data-aos="fade-up" class="link-section" id="links">
-      <h1 class="link-title">Links</h1>
+      <h1 class="section-title" style="width:100%">Links</h1>
+      <p class="section-subtitle" style="width:100%; margin-top:-0.5rem;">/* find me across the internet */</p>
 
       <a href="#" id="github" class="card">
         <img src="img/github_logo.png" alt="github_logo" class="card-img">
@@ -150,10 +178,18 @@
           <h1>CTFlearn</h1>
         </div>
       </a>
+
+      <a href="#" id="rootme" class="card">
+        <img src="img/rootme_logo.png" alt="rootme_logo" class="card-img rootme-img">
+        <div class="card-body">
+          <h1>RootMe</h1>
+        </div>
+      </a>
     </section>
 
     <section data-aos="fade-up" class="project-section" id="projects">
-      <h1 class="project-title">Projects</h1>
+      <h1 class="section-title" style="width:100%">Projects</h1>
+      <p class="section-subtitle" style="width:100%; margin-top:-0.5rem;">/* things i've built */</p>
 
       <div class="card-project">
           <img src="img/to-do-list-background.png" alt="to_do_list">
@@ -177,7 +213,7 @@
           <img src="img/scarfall-alliance-background.png" alt="scarfall_alliance_background">
           <div class="card-project-content">
             <h1>ScarFall Alliance</h1>
-            <p>A simple Website built using HTML, CSS, and the Bootstrap framework. It was designed for the ScarFall Tournament Discord server to provide tournament information and invite players to join the community..</p>
+            <p>A simple Website built using HTML, CSS, and the Bootstrap framework. It was designed for the ScarFall Tournament Discord server.</p>
             <button type="button" class="card-button-project" onclick="window.open('https://christian93111.github.io/ScarFall-Alliance', '_blank')">Visit</button>
           </div>
       </div>
@@ -186,7 +222,7 @@
           <img src="img/hotel-reservation-system-background.png" alt="hotel_reservation_system_background">
           <div class="card-project-content">
             <h1>Hotel Reservation System</h1>
-            <p>A simple terminal-based system built in Python for internal use by Admins and Employees. Admins can manage employees and view all bookings, while Employees handle reservations, check-ins, and check-outs.</p>
+            <p>A simple terminal-based system built in Python for internal use by Admins and Employees.</p>
             <button type="button" class="card-button-project" onclick="window.open('https://github.com/Christian93111/Hotel-Reservation-System', '_blank')">Visit</button>
           </div>
       </div>
@@ -195,7 +231,7 @@
           <img src="img/pinterest-clone.png" alt="pinterest-clone-background">
           <div class="card-project-content">
             <h1>Pinterest Clone</h1>
-            <p>A simple Pinterest website clone built using HTML,CSS, and JavaScript.</p>
+            <p>A simple Pinterest website clone built using HTML, CSS, and JavaScript.</p>
             <button type="button" class="card-button-project" onclick="window.open('https://christian93111.github.io/pinterest-clone', '_blank')">Visit</button>
           </div>
       </div>
@@ -283,21 +319,21 @@
     </section>
 
     <section data-aos="fade-up" class="contact-section" id="contact">
-      <h1>Contact Me</h1>
-      <p class="contact-description">Feel free to contact me with any inquiries or questions</p>
+      <h1 class="section-title">Contact Me</h1>
+      <p class="contact-description">// feel free to reach out with any inquiries</p>
 
       <form action="https://formspree.io/f/mblywwqd" method="POST">
-        <input type="text" name="name" placeholder="Name" required>
-        <input type="email" name="email" placeholder="Email" required>
-        <textarea name="message" placeholder="Message" required></textarea>
-        <button type="submit" class="contact-submit">Submit</button>
+        <input type="text" name="name" placeholder="> name" required>
+        <input type="email" name="email" placeholder="> email" required>
+        <textarea name="message" placeholder="> message" required></textarea>
+        <button type="submit" class="contact-submit">[ Submit ]</button>
       </form>
     </section>
 
     <script src="script.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-      AOS.init();
+      AOS.init({ duration: 800, once: true });
     </script>
 </body>
 </html>
