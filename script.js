@@ -347,7 +347,7 @@ const CAT_FILES = {
     { text: '', type: 'default' },
     { text: '  FLAG FOUND!', type: 'warn' },
     { text: '', type: 'default' },
-    { text: '  Fan2K{y0u_f0und_th3_s3cr3t_f1l3}', type: 'highlight' },
+    { text: '  flag{y0u_f0und_th3_s3cr3t_f1l3}', type: 'highlight' },
     { text: '', type: 'default' },
   ],
 };
